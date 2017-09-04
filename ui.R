@@ -15,12 +15,12 @@ shinyUI(fluidPage(
                               -moz-column-count: 4;
                               column-count: 4;
                               }"))),
+    
     fluidRow(
       tags$div(style = 'height:430px;',
       plotOutput("hansardplot"))),
     
     fluidRow(
-      
       tags$div(align = "left", 
                class = "multicol",
                style = 'width:700px;',
@@ -45,6 +45,8 @@ shinyUI(fluidPage(
                                   selected =c("Disabled Person","People With Disability"))),
       
       sliderInput("year", "Year", 1936, 2016, value = c(1936, 2016), sep="")
+      
+      )
     )
-    )
-))
+  )
+)
